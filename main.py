@@ -332,42 +332,11 @@ greet_default()
 
 
 
-# Chapter 9 - Classes and Objects
 
-# Class with a property
-class Cat:
-    color = "black"
+# Chapter 9 - PIP and Virtual Environments
+from colorama import Fore, Style, init
 
-cat1 = Cat()
-print(cat1.color)  # black
-
-
-# Class with a constructor
-class CatWithColor:
-    color = "black"
-
-    def __init__(self, color):
-        self.color = color
-
-cat2 = CatWithColor("orange")
-print(cat2.color)  # orange
-
-
-# Class with a method
-class TalkingCat:
-    def say(self):
-        print("Meow..meow")
-
-cat3 = TalkingCat()
-cat3.say()
-
-
-# The first method parameter can have any name (convention: self)
-class CustomCat:
-    color = "black"
-
-    def say(myParam):
-        print("My color is %s" % myParam.color)
-
-cat4 = CustomCat()
-cat4.say()
+init(autoreset=True)
+print(Fore.GREEN + "Colorama is installed inside the virtual environment.")
+print(Fore.RED + "This line is printed in red.")
+print(Style.BRIGHT + Fore.CYAN + "PIP and venv work correctly.")
